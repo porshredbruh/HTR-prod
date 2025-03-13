@@ -1,7 +1,8 @@
 # HTR-prod
 <p align="center">
-      <img src="https://i.ibb.co/fYtd9nHX/htr.png" alt="htr" border="0"></a>
+    <img src="https://i.postimg.cc/C1Wd6R73/IMG-20250309-193541-418.jpg" alt="htr_logo" width="780" height="auto">
 </p>
+
 
 ## О проекте
 
@@ -20,21 +21,47 @@
 
 1. Изображение приходит на сервер от пользователя.
 2. Определение объектов(text, math и image) моделью Object detection.
-3. Объекты класса text отправляются на распознавание в модель №1, а объекты класса math - в №2.
+3. Объекты класса text и math отправляются в соответствующие OCR модели.
 4. Собирается файл docx с содержанием аналогичным по расположению объектов на исходной фотографии.
 5. Файл docx сохраняется в хранилище телефона пользователя.
 
+
 <p align="center">
-      <img src="https://i.ibb.co/Pvq5BycX/1.png" alt="htr1" border="0"></a>
+    <img src="https://i.postimg.cc/TYx3LM4J/1.png" alt="htr_logo" width="780" height="auto">
 </p>
    
 ## Технический стек
 
 - Machine Learning:
     - Object detection: Faster R-CNN
-    - OCR: кастомный трансформер на TransformerModelOCR
+    - OCR: кастомный класс на TransformerModelOCR
 - Мобильная разработка: Android Studio, Java
 - Backend: Uvicorn
+
+## Модели
+
+### Object detection 
+
+Модель детектирует на изображении объекты 3-х классов: 
+- text (основной текст)
+- math (математические формулы)
+- image (чертежи, рисунки)
+
+В ходе разработки эксперементировал с выбором модели. Вот лучшие результаты, которых получилось добиться:
+| Модель        | mAP      | F1-Score | Loss     |
+| :-------------| :---:    | :------: | :----:   |
+| Faster R-CNN  | 0.826859 | 0.866175 | 0.146773 |
+| YOLOv5        | 0.705259 | 0.717947 | 0.246662 |
+| RetinaNET     | 0.654271 | 0.699593 | 0.270770 |
+| EfficientDet  | 0.617148 | 0.650774 | 0.283843 |
+
+Faster R-CNN является "абсолютным победителем", поэтому его и использую.
+
+### OCR
+
+После выделения bounding box-ов объекты классов text и math отправляются в 2 разные OCR модели. Text переводится в машинописный вид, math - конвертируется в LaTeX. 
+<br><br>
+Для моделей я использую самописный класс на TransformerModelOCR.
 
 ## Документация
 
