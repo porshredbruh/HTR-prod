@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FullScreenTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">#FFFFFF</item> <!-- Белый цвет -->
+        <item name="android:windowLightStatusBar">true</item> <!-- Для темных значков на белом фоне -->
+
+    </style>
+
+</resources>

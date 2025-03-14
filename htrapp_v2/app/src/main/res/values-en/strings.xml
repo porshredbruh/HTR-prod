@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">htrapp-v2</string>
+    <string name="hello">Hello!</string>
+    <string name="description">This is a\nhandwriting recognition app</string>
+    <string name="take_a_photo">take a\nphoto</string>
+    <string name="slPhoto">select photo\nfrom gallery</string>
+    <string name="guide">guide</string>
+    <string name="settings">settings</string>
+    <string name="Guide_list">Instructions</string>
+    <string name="Settings_list">Settings</string>
+    <string name="theme">theme</string>
+    <string name="language">language</string>
+    <string name="guide1">Take a photo and upload a photo from the gallery</string>
+    <string name="guide2">Wait for the image to be processed</string>
+    <string name="guide3">Use the document you received!</string>
+</resources>

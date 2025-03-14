@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="backgroundColor">#000000</color> <!-- Чёрный фон -->
+    <color name="textColor">#FFFFFF</color>       <!-- Белый текст -->
+    <color name="buttonTransparent">#00FFFFFF</color> <!-- Прозрачный фон кнопки -->
+</resources>

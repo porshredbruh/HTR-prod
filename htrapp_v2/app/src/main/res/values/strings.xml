@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">htrapp-v2</string>
+    <string name="hello">Здравствуйте!</string>
+    <string name="description">Это - приложение для\nраспознавания рукописного текста</string>
+    <string name="take_a_photo">сделать\nфотографию</string>
+    <string name="slPhoto">выбрать\nиз галереи</string>
+    <string name="guide">инструкция</string>
+    <string name="settings">настройки</string>
+    <string name="Guide_list">Инструкция</string>
+    <string name="Settings_list">Настройки</string>
+    <string name="theme">тема</string>
+    <string name="language">язык</string>
+    <string name="guide1">Сделайте снимок или загрузить фотографию из галереи</string>
+    <string name="guide2">Дождитесь обработки изображения</string>
+    <string name="guide3">Пользуйтесь полученным документом!</string>
+</resources>
